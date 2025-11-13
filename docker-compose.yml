@@ -1,0 +1,38 @@
+services:
+  # Nó Mestre (NameNode, ResourceManager)
+  hadoop-master:
+    build: .
+    hostname: hadoop-master
+    ports:
+      - "9870:9870"   # Interface Web do HDFS (NameNode)
+      - "8088:8088"   # Interface Web do YARN (ResourceManager)
+    networks:
+      - hadoop-net
+    volumes:
+      - ./scripts:/root/scripts
+      - ./textos:/root/textos
+      - ./hadoop-configs:/opt/hadoop/etc/hadoop
+      - ./bootstrap.sh:/bootstrap.sh
+    command: ["bash", "/bootstrap.sh"]
+
+  # Primeiro Nó Escravo (DataNode, NodeManager)
+  hadoop-worker-1:
+    build: .
+    hostname: hadoop-worker-1
+    networks:
+      - hadoop-net
+    volumes:
+      - ./hadoop-configs:/opt/hadoop/etc/hadoop
+
+  # Segundo Nó Escravo (DataNode, NodeManager)
+  hadoop-worker-2:
+    build: .
+    hostname: hadoop-worker-2
+    networks:
+      - hadoop-net
+    volumes:
+      - ./hadoop-configs:/opt/hadoop/etc/hadoop
+
+networks:
+  hadoop-net:
+    driver: bridge

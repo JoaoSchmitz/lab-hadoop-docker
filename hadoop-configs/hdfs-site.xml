@@ -1,0 +1,18 @@
+<configuration>
+<property>
+  <name>dfs.data.dir</name>
+  <value>/tmp/dfsdata/namenode</value>
+</property>
+<property>
+  <name>dfs.data.dir</name>
+  <value>/tmp/dfsdata/datanode</value>
+</property>
+<property> <!-- Mudança 2: Limitar o Tamanho dos blocos de arquivos (Arquivo de 30MB vira 3 blocos de 10MB) -->
+  <name>dfs.blocksize</name>
+  <value>10485760</value>
+</property>
+<property>
+  <name>dfs.replication</name>
+  <value>2</value> <!-- Mudança 1: Replicar arquivos (Arquivo enviado é duplicado automaticamente) -->
+</property>
+</configuration>

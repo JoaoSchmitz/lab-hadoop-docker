@@ -1,0 +1,6 @@
+# Ignorar o instalador gigante do Hadoop
+hadoop-3.3.6.tar.gz
+
+# Ignorar arquivos de sistema e temporários
+.DS_Store
+**/.ipynb_checkpoints
