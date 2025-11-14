@@ -26,16 +26,27 @@
 
 <property> <!-- Mudança 3: Limitar a memória alocada para cada Worker -->
   <name>yarn.nodemanager.resource.memory-mb</name>
-  <value>2048</value>
+  <value>4096</value>
 </property>
 
 <property> <!-- Mudança 4: Limitar a quantidade de núcleos virtuais alocados para cada Worker -->
   <name>yarn.nodemanager.resource.cpu-vcores</name>
-  <value>2</value>
+  <value>4</value>
 </property>
 
 <property>
   <name>yarn.nodemanager.resource.detect-hardware-capabilities</name>
   <value>false</value>
+</property>
+
+<!-- Mudança 5: Limitar o tempo para declarar um nó como MORTO após último contato -->
+<property>
+  <name>yarn.nm.liveness-monitor.expiry-interval-ms</name>
+  <value>60000</value> 
+</property>
+
+<property>
+    <name>yarn.resourcemanager.am.max-attempts</name>
+    <value>10</value>
 </property>
 </configuration>

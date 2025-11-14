@@ -4,7 +4,7 @@
   <value>yarn</value> 
 </property> 
 
-<!-- Mudança 5: Fazer o mapReduce estourar o limite de memória do Worker (Mudança 3) -->
+<!-- Mudança 6 (Opcional): Fazer o mapReduce estourar o limite de memória do Worker (Mudança 3) -->
 <!-- Descomente as linhas abaixo para testar!! -->
 <!--
 <property>
