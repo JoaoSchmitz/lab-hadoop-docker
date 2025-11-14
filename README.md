@@ -11,10 +11,15 @@ Este projeto sobe um cluster Hadoop completo usando Docker para fins de estudo e
 
 ### 1. Preparação
 
-Antes de rodar, você precisa baixar o binário do Hadoop:
+Antes de rodar, você precisa do binário do Hadoop (um arquivo de 700MB) na raiz do projeto.
 
-1.  Baixe o **Hadoop 3.3.6 (`hadoop-3.3.6.tar.gz`)**.
-2.  Coloque o arquivo na **raiz** desta pasta (ao lado do `Dockerfile`).
+Se você não tiver o arquivo baixado, execute o seguinte comando no seu terminal para realizar o download:
+
+%%%bash
+wget https://dlcdn.apache.org/hadoop/common/hadoop-3.3.6/hadoop-3.3.6.tar.gz -O hadoop-3.3.6.tar.gz
+%%%
+
+*(Se `wget` não funcionar, você pode baixar o arquivo manualmente [deste link](https://dlcdn.apache.org/hadoop/common/hadoop-3.3.6/hadoop-3.3.6.tar.gz) e colocá-lo nesta pasta com o nome `hadoop-3.3.6.tar.gz`)*.
 
 A estrutura deve ficar assim:
 
