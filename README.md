@@ -15,9 +15,9 @@ Antes de rodar, você precisa do binário do Hadoop (um arquivo de 700MB) na rai
 
 Se você não tiver o arquivo baixado, execute o seguinte comando no seu terminal para realizar o download:
 
-%%%bash
+```bash
 wget https://dlcdn.apache.org/hadoop/common/hadoop-3.3.6/hadoop-3.3.6.tar.gz -O hadoop-3.3.6.tar.gz
-%%%
+```
 
 *(Se `wget` não funcionar, você pode baixar o arquivo manualmente [deste link](https://dlcdn.apache.org/hadoop/common/hadoop-3.3.6/hadoop-3.3.6.tar.gz) e colocá-lo nesta pasta com o nome `hadoop-3.3.6.tar.gz`)*.
 
